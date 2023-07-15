@@ -73,6 +73,29 @@ const s = [5,1,22,23,6,-1,8,10];
 console.log(isValidSubsequence(a,s));
 
 
+/* 
+  Optimal solution:
+
+  1. create 2 pointers (arr & seq)
+  2. arr will increment regardless
+  3. seq will increment only when tehre is a match
+  4. how to know if we have the subsequence, if teh seqInd is the same as the sequence.length
+
+T: O(n) S: O(1)
+*/
+function isValidSubsequence2(array, sequence) {
+  let arrayIndex = 0;
+  let sequenceIndex = 0;
+
+  while (arrayIndex < array.length && sequenceIndex < sequence.length) {
+    if (array[arrayIndex] === sequence[sequenceIndex]) sequenceIndex += 1;
+    arrayIndex += 1;
+  }
+
+  return sequenceIndex === sequence.length;
+  
+}
+
 module.expores = {
   isValidSubsequence
 }
