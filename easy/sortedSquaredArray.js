@@ -39,6 +39,6 @@ function sortedSquaredArray(array) {
 
 let arr =   [-5,-2, -1, 0, 1, 3, 6];
 
-console.log('Results', sortedSquaredArray(arr))
+// console.log('SortedSquaredArray', sortedSquaredArray(arr))
 
 module.exports = {sortedSquaredArray}

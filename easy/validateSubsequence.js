@@ -70,7 +70,7 @@ function isValidSubsequence(array, sequence) {
 const a = [5,1,22,25,6,-1,8,10];
 const s = [5,1,22,23,6,-1,8,10];
 
-// console.log(isValidSubsequence(a,s));
+// console.log('validateSubsequence', isValidSubsequence(a,s));
 
 
 /* 
