@@ -4,3 +4,5 @@ const { sortedSquaredArray} = require('./easy/sortedSquaredArray');
 const {tournamentWinners} = require('./easy/tournamentWinners');
 const {nonConstructibleChange} = require('./easy/nonConstructibleChange');
 const {transposeMatrix} = require('./easy/transposeMatrix');
+const {  findClosestValueInBstIterative,
+  findClosestValueInBstRecursive} = require('./easy/findClosestValueInBST.js')
