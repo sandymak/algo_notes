@@ -93,6 +93,7 @@ function findClosestValueInBstHelper(currentNode, target, closest) {
     } else if (target > currentNode.value) {
       return findClosestValueInBstHelper(currentNode.right, target, closest);
          // console.log('curreNodeRight', currentNode.value)
+      //this else case is for when the node vale === target
     } else {
       return closest;
     }
@@ -119,8 +120,8 @@ class BST {
   root.right.right = new BST(22);
   const expected = 13;
 
-console.log('Find Closest Value in BST Iterative', findClosestValueInBstIterative(root, 12))
-console.log('Find Closest Value in BST Recursive', findClosestValueInBstRecursive(root, 12))
+// console.log('Find Closest Value in BST Iterative', findClosestValueInBstIterative(root, 12))
+// console.log('Find Closest Value in BST Recursive', findClosestValueInBstRecursive(root, 12))
 
 module.exports = {
   findClosestValueInBstIterative,

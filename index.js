@@ -6,3 +6,4 @@ const {nonConstructibleChange} = require('./easy/nonConstructibleChange');
 const {transposeMatrix} = require('./easy/transposeMatrix');
 const {  findClosestValueInBstIterative,
   findClosestValueInBstRecursive} = require('./easy/findClosestValueInBST.js')
+const {branchSums} = require('./easy/branchSums');
