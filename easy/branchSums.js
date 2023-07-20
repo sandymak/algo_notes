@@ -84,6 +84,10 @@ function branchSums(root) {
 }
 
 /* 
+
+Below algorithm greedily traverses the tree left nodes deeply first (1-2 -4-8) and summs the values (1 + 2 + 4 + 8), stores the sum in a "sums" array which is kept in storage by closure (sums.push(runningSum)) before the function returns......ie 
+the outer function calls the CalculateBranchSums by the right leaf node (1-2-4-9) and sums the values...etc etc
+
               1
             /   \
           2      3
@@ -116,7 +120,7 @@ function calculateBranchSums (node, runningSum, sums) {
 };
 
 
-branchSums(tree);
+// branchSums(tree);
 // [15, 16, 18, 10, 11]
 
 module.exports = {branchSums};

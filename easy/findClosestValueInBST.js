@@ -38,14 +38,16 @@
 function findClosestValueInBstIterative(tree, target) {
   let closestNode = tree;
   let currentNode = tree;
-
+  // while we have not reached a non node
   while (currentNode !== null) {
     console.log('currentNodeval', currentNode.value)
+    // below is code to find which node is closer to target
     const closestNodeDifference = Math.abs(target - closestNode.value);
     const currentNodeDifference = Math.abs(target - currentNode.value);
     if (currentNodeDifference < closestNodeDifference) closestNode = currentNode;
 
     /* 
+      // Logic is to ONLY traverse the left or right node depending on node value & target
       This logic works because for every BST node:
 
       left <= currNodeVal < right
