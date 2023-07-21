@@ -63,6 +63,34 @@ class Node {
     }
     return array
   }
+
+  /* 
+    Implement the breadthFirstSearch method on the Node class, which takes in an empty array, 
+    traverses the tree using theBreadth-first search approach (specifically navigating the tree from left to     right)
+    stores all the nodes' names in the input array, and returns it.
+
+graph =          A
+              /  |  \
+            B    C    D
+          /   \      /  \
+         E     F    G    H
+              / \    \
+             I   J    K
+
+    sample output = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+  */
+  breadthFirstSearch(array) {
+    const queue = [this];
+    while (queue.length > 0) {
+      const current = queue.shift();
+      array.push(current.name);
+      if (!current.children.length) continue;
+      for (const child of current.children) {
+        queue.push(child)
+      }
+    }
+    return array;
+  }
 }
 
   const graph = new Node('A');
@@ -72,7 +100,22 @@ class Node {
   graph.children[0].children[1].addChild('I').addChild('J');
   graph.children[2].children[0].addChild('K');
 
-// console.log('DepthFirstSearch', graph.depthFirstSearch([]));
-// console.log('DepthFirstSearch', graph.dfs([]));
+
+// const d = graph.depthFirstSearch([]);
+// const dExpected = [
+//   'A', 'B', 'E', 'F',
+//   'I', 'J', 'C', 'D',
+//   'G', 'K', 'H'
+// ] 
+// console.log('DepthFirstSearch', d, "works?", d[4] === dExpected[4]);
+// console.log('DepthFirstSearch', graph.dfs([]))
+
+// const b = graph.breadthFirstSearch([]);
+// const bExpected = [
+//   'A', 'B', 'C', 'D',
+//   'E', 'F', 'G', 'H',
+//   'I', 'J', 'K'
+// ];
+// console.log('Breadth First Search', b, "works?", b[4] === bExpected[4])
 
 module.exports = {graph};

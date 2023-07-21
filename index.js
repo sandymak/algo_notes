@@ -13,7 +13,7 @@ const { findClosestValueInBstIterative,
 const { branchSums} = require('./easy/branchSums');
 const { nodeDepthsRecursive, nodeDepthsIterative} = require('./easy/nodeDepths');
 const { evaluateExpressionTree} = require('./easy/evaluateExpressionTree');
-const {graph} = require('./easy/depthFirstSearch');
+const {graph} = require('./easy/graphTraverse');
 
 
 
