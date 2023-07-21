@@ -78,6 +78,8 @@ graph =          A
              I   J    K
 
     sample output = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+
+    T: O(v+ e) | S: o(v)
   */
   breadthFirstSearch(array) {
     const queue = [this];
