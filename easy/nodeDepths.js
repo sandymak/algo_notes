@@ -1,23 +1,3 @@
-// This is the class of the input binary tree.
-class BinaryTree {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-  const root = new BinaryTree(1);
-  root.left = new BinaryTree(2);
-  root.left.left = new BinaryTree(4);
-  root.left.left.left = new BinaryTree(8);
-  root.left.left.right = new BinaryTree(9);
-  root.left.right = new BinaryTree(5);
-  root.right = new BinaryTree(3);
-  root.right.left = new BinaryTree(6);
-  root.right.right = new BinaryTree(7);
-
-
 /* 
 The distance between a node in a Binary Tree and the tree's root is called the node's depth.
 
@@ -34,13 +14,13 @@ tree =        1
     /  \  /   
    8    9 10
    
-output = 16;
+output = 19;
 // The depth of the node with value 2 is 1.
 // The depth of the node with value 3 is 1.
 // The depth of the node with value 4 is 2.
 // The depth of the node with value 5 is 2.
 // Etc...
-// Summing all of these depths yields 16.
+// Summing all of these depths yields 19.
 
 
 Approach:
@@ -75,7 +55,5 @@ function nodeDepthsIterative(t) {
 
 // console.log("Node Depths Recurssive", nodeDepthsRecursive(root));
 // console.log("Node Depths Iterative",nodeDepthsIterative(root));
-
-
 
 module.exports = {nodeDepthsRecursive, nodeDepthsIterative}

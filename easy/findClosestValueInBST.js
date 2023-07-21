@@ -40,7 +40,7 @@ function findClosestValueInBstIterative(tree, target) {
   let currentNode = tree;
   // while we have not reached a non node
   while (currentNode !== null) {
-    console.log('currentNodeval', currentNode.value)
+    // console.log('currentNodeval', currentNode.value)
     // below is code to find which node is closer to target
     const closestNodeDifference = Math.abs(target - closestNode.value);
     const currentNodeDifference = Math.abs(target - currentNode.value);
@@ -79,7 +79,7 @@ function findClosestValueInBstRecursive(tree, target) {
 
 function findClosestValueInBstHelper(currentNode, target, closest) {
    if (currentNode === null) return closest;
-    console.log('currentNodeval', currentNode.value)
+    // console.log('currentNodeval', currentNode.value)
     const closestNodeDifference = Math.abs(target - closest);
     const currentNodeDifference = Math.abs(target - currentNode.value);
     if (currentNodeDifference < closestNodeDifference) closest = currentNode.value;
@@ -101,29 +101,6 @@ function findClosestValueInBstHelper(currentNode, target, closest) {
     }
 }
 
-
-// This is the class of the input tree. Do not edit.
-class BST {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-  const root = new BST(10);
-  root.left = new BST(5);
-  root.left.left = new BST(2);
-  root.left.left.left = new BST(1);
-  root.left.right = new BST(5);
-  root.right = new BST(15);
-  root.right.left = new BST(13);
-  root.right.left.right = new BST(14);
-  root.right.right = new BST(22);
-  const expected = 13;
-
-// console.log('Find Closest Value in BST Iterative', findClosestValueInBstIterative(root, 12))
-// console.log('Find Closest Value in BST Recursive', findClosestValueInBstRecursive(root, 12))
 
 module.exports = {
   findClosestValueInBstIterative,

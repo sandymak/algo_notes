@@ -41,42 +41,6 @@ which is roughly half of n total nodes, & when we look at upper bounds it will b
 Lastly, we will be bounded by O(n) becase we won't exceed n branch sums in a given binary tree
 */
 
-class BinaryTreeBase {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-class BinaryTree extends BinaryTreeBase {
-  constructor(value) {
-    super(value);
-  }
-
-  insert(values, i = 0) {
-    if (i >= values.length) return;
-    const queue = [this];
-    while (queue.length > 0) {
-      let current = queue.shift();
-      if (current.left === null) {
-        current.left = new BinaryTree(values[i]);
-        break;
-      }
-      queue.push(current.left);
-      if (current.right === null) {
-        current.right = new BinaryTree(values[i]);
-        break;
-      }
-      queue.push(current.right);
-    }
-    this.insert(values, i + 1);
-    return this;
-  }
-}
-
-const tree = new BinaryTree(1).insert([2, 3, 4, 5, 6, 7, 8, 9, 10]);
-
 function branchSums(root) {
   const sums = [];
   calculateBranchSums(root, 0, sums);
@@ -96,31 +60,38 @@ the outer function calls the CalculateBranchSums by the right leaf node (1-2-4-9
       / \  /
      8  9 10
 
+output = [15, 16, 18, 10 , 11];
+// 15 == 1 + 2 + 4 + 8;
+// 16 == 1 + 2 + 4 + 9;
+// 18 == 1 + 2 + 5 + 10
+// 10 == 1 + 3 + 6;
+// 11 == 1 + 3 + 7;
+
 */
 function calculateBranchSums (node, runningSum, sums) {
   // address an edge case where a node has left/right but not both
   if (!node) return;
 
-    console.log('nodeValue', node.value);
-    console.log('sums', sums);
+    // console.log('nodeValue', node.value);
+    // console.log('sums', sums);
     const newRunningSum = runningSum + node.value;
-  // if we have found a leaf node, 
-  // the running sum is now a branch sum & we should add to the sums
+   /* 
+     if we have found a leaf node, 
+     the running sum is now a branch sum & we should add to the sums
+   */
   if (!node.left && !node.right) {
     sums.push(newRunningSum);
-    // How does 'sums' get the newRunningSum for other function calls that have sums? 
-    // it is because of closure... the "sums" array is changed here & with closure, it continues to be changed
+    /* 
+      How does 'sums' get the newRunningSum for other function calls that have sums? 
+      it is because of closure... the "sums" array is changed here & with closure, it continues to be changed
+    */
     return;
   }
   calculateBranchSums(node.left, newRunningSum, sums);
-    console.log('sums left end', sums)
+    // console.log('sums left end', sums)
   calculateBranchSums(node.right, newRunningSum, sums);
-    console.log('sums right end', sums)
+    // console.log('sums right end', sums)
   
 };
-
-
-// branchSums(tree);
-// [15, 16, 18, 10, 11]
 
 module.exports = {branchSums};
