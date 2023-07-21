@@ -15,6 +15,9 @@ const { nodeDepthsRecursive, nodeDepthsIterative} = require('./easy/nodeDepths')
 const { evaluateExpressionTree} = require('./easy/evaluateExpressionTree');
 const {graph} = require('./easy/graphTraverse');
 
+// MEDIUM
+const {threeNumberSum, threeNumberSumAlt} = require("./medium/threeNumberSum");
+
 
 
 

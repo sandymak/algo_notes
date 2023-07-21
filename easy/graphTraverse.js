@@ -79,7 +79,7 @@ graph =          A
 
     sample output = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
 
-    T: O(v+ e) | S: o(v)
+    T: O(v+ e) vertices + edges of the graph | S: o(v)
   */
   breadthFirstSearch(array) {
     const queue = [this];
