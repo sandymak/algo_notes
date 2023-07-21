@@ -1,18 +1,3 @@
-// This is an input class. Do not edit.
-class BinaryTree {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-const t = new BinaryTree(-1);
-  t.left = new BinaryTree(2);
-  t.right = new BinaryTree(-2);
-  t.right.left = new BinaryTree(5);
-  t.right.right = new BinaryTree(1);
-
 /* 
 You're given a binary expression tree. Write a function to evaluate this tree mathematically
 and return a single resulting integer.
@@ -60,7 +45,5 @@ function evaluateExpressionTree(tree) {
   return leftOperand * rightOperand;
 
 } 
-
-// console.log("Evaluate Expression Tree", evaluateExpressionTree(t));
 
 module.exports = {evaluateExpressionTree}

@@ -49,6 +49,24 @@ tree =        1
 // console.log("Node Depths Iterative", ndi, "works?", ndi === 19);
 
 /* 
+tree =        -1
+           /       \
+         -2         -3
+        /   \      /   \
+      -4     2    8     3
+     /   \
+    2     3
+
+
+*/
+// const expressionTree = new BinaryTree(-1).insert([-2,-3,-4,2,8,3,2,3]);
+
+// console.log('expressionTree?', treeTraverse(expressionTree));
+// const expression = evaluateExpressionTree(expressionTree);
+
+// console.log('Evaluate Expression Tree', expression, "works?", expression === 6);
+
+/* 
    BST = 10
        /    \
       5      15
