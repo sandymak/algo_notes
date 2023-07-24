@@ -1,5 +1,5 @@
 // UTILS
-const {BinaryTree, treeTraverse} = require('./utils');
+const {BinaryTree, treeTraverse, LinkedList} = require('./utils');
 
 // Problems
 const { twoNumberSum, twoNumberSum2 } = require('./easy/twoNumberSum');
@@ -14,6 +14,9 @@ const { branchSums} = require('./easy/branchSums');
 const { nodeDepthsRecursive, nodeDepthsIterative} = require('./easy/nodeDepths');
 const { evaluateExpressionTree} = require('./easy/evaluateExpressionTree');
 const {graph} = require('./easy/graphTraverse');
+const {removeDuplicatesFromLinkedList} = require('./easy/removeDuplicatesFromLinkedList');
+const {middleNode} = require('./easy/middleNode');
+
 
 // MEDIUM
 const {threeNumberSum, threeNumberSumAlt} = require("./medium/threeNumberSum");
@@ -93,3 +96,16 @@ tree =        -1
 
 // const bstR12 = findClosestValueInBstRecursive(bst, 12);
 // console.log('Find Closest Value in BST Recursive', bstR12, "works?", bstR12 === 13);
+
+// LINKED LISTS
+
+  // const sortedLinkedList = new LinkedList(1).addMany([1, 3, 4, 4, 4, 5, 6, 6]);
+  // const expectedNoDupes = new LinkedList(1).addMany([3, 4, 5, 6]).getNodesInArray();
+  // const actualNoDupes = removeDuplicatesFromLinkedList(sortedLinkedList).getNodesInArray();
+
+  // console.log('Remove Duplicates From Linked List', actualNoDupes, "work?", actualNoDupes[3] === expectedNoDupes[3]);
+
+// const linkedList = new LinkedList(2).addMany([7,3,5]);
+// const middle = middleNode(linkedList);
+
+// console.log('Middle Node', middle, "work?", middle.value === 3)

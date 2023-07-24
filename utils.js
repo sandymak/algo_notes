@@ -32,6 +32,7 @@ class BinaryTree extends BinaryTreeBase {
   }
 }
 
+// DFS
 function treeTraverse (node, array = []) {
   if (!node) return array;
   array.push(node.value);
@@ -40,4 +41,38 @@ function treeTraverse (node, array = []) {
   return array;
   
 }
-module.exports = {BinaryTree, treeTraverse} ;
+
+class LinkedListBase {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList extends LinkedListBase {
+  addMany(values) {
+    let current = this;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    for (const value of values) {
+      current.next = new LinkedList(value);
+      current = current.next;
+    }
+    return this;
+  }
+
+  getNodesInArray() {
+    const nodes = [];
+    let current = this;
+    while (current !== null) {
+      nodes.push(current.value);
+      current = current.next;
+    }
+    return nodes;
+  }
+}
+
+
+
+module.exports = {BinaryTree, treeTraverse, LinkedList} ;
