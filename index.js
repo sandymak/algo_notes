@@ -20,12 +20,17 @@ const {middleNode} = require('./easy/middleNode');
 
 // MEDIUM
 const {threeNumberSum, threeNumberSumAlt} = require("./medium/threeNumberSum");
+const {removeKthNodeFromEnd} = require('./medium/removeKthNodeFromEnd');
 
 
 
 
 
-// BINARY TREES
+/* 
+ * 
+ * BINARY TREES
+ *
+*/
 
 /* 
 tree =        1
@@ -84,7 +89,9 @@ tree =        -1
 */
 
 /* 
-  UNCOMMENT OUT BELOW TO RUN PROBLEMS
+ * 
+ * UNCOMMENT OUT BELOW TO RUN PROBLEMS
+ *
 */
 
 // const bst = new BinaryTree(10).insert([5,15,2,5,13,22,1,14]);
@@ -97,7 +104,13 @@ tree =        -1
 // const bstR12 = findClosestValueInBstRecursive(bst, 12);
 // console.log('Find Closest Value in BST Recursive', bstR12, "works?", bstR12 === 13);
 
-// LINKED LISTS
+/* 
+ * 
+ * MEDIUM - LINKED LISTS
+ *
+*/
+
+// ---------REMOVE DUPLICATES FROM LINKED LIST
 
   // const sortedLinkedList = new LinkedList(1).addMany([1, 3, 4, 4, 4, 5, 6, 6]);
   // const expectedNoDupes = new LinkedList(1).addMany([3, 4, 5, 6]).getNodesInArray();
@@ -105,7 +118,19 @@ tree =        -1
 
   // console.log('Remove Duplicates From Linked List', actualNoDupes, "work?", actualNoDupes[3] === expectedNoDupes[3]);
 
+// ---------- MIDDLE NODE
+
 // const linkedList = new LinkedList(2).addMany([7,3,5]);
 // const middle = middleNode(linkedList);
 
 // console.log('Middle Node', middle, "work?", middle.value === 3)
+
+// -------- REMOVE Kth NODE FROM END
+
+// const linkedList10 = new LinkedList(0).addMany([1,2,3,4,5,6,7,8,9]);
+// const expectedListWithKRemoved = new LinkedList(0).addMany([1,2,3,4,5,7,8,8]).getNodesInArray();
+
+// removeKthNodeFromEnd(linkedList10, 4);
+// const actualListWithKRemoved = linkedList10.getNodesInArray();
+
+// console.log('Remove Kth Node from End', actualListWithKRemoved, 'work?', expectedListWithKRemoved[2] === actualListWithKRemoved[2])
