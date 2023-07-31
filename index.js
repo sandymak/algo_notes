@@ -22,6 +22,8 @@ const {middleNode} = require('./easy/middleNode');
 const {threeNumberSum, threeNumberSumAlt} = require("./medium/threeNumberSum");
 const {removeKthNodeFromEnd} = require('./medium/removeKthNodeFromEnd');
 const {sumOfLinkedLists, sumOfLinkedListsPretty} = require('./medium/sumOfLinkedLists');
+const { mergingLinkedListsUsingTwoNodes, mergingLinkedListsUsingSet } = require('./medium/mergingLinkedLists');
+
 
 
 
@@ -149,3 +151,12 @@ tree =        -1
 // const actualSumInArray2 = getNodesInArray(actualSumOfLinkedLists)
 
 // console.log('Sum of Linked Lists', actualSumInArray2, 'work?', expectedSumOfLinkedLists.join() === actualSumInArray2.join())
+
+// -------------- MERGING LINKED LISTS
+// const L113 = new LinkedList(2).addMany([5,3,1,4]);
+// const L114 = new LinkedList(8).addMany([7,1,4]);
+// const expectedIntersection = new LinkedList(1).addMany([4]).getNodesInArray();
+// const actualIntersection = mergingLinkedListsUsingTwoNodes(L113, L114);
+// const actualIntersectionInArray = getNodesInArray(actualIntersection);
+
+// console.log('Merging Linked Lists', actualIntersectionInArray, 'huh?', actualIntersection, "work?", actualIntersectionInArray.join() === expectedIntersection.join())
