@@ -73,6 +73,16 @@ class LinkedList extends LinkedListBase {
   }
 }
 
+function getNodesInArray(node) {
+  const nodes = [];
+  let current = node;
+  while (current !== null) {
+    nodes.push(current.value)
+    current = current.next;
+  }
+  return nodes;
+}
 
 
-module.exports = {BinaryTree, treeTraverse, LinkedList} ;
+
+module.exports = {BinaryTree, treeTraverse, LinkedList, LinkedListBase, getNodesInArray} ;

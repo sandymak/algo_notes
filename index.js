@@ -1,5 +1,5 @@
 // UTILS
-const {BinaryTree, treeTraverse, LinkedList} = require('./utils');
+const {BinaryTree, treeTraverse, LinkedList, getNodesInArray} = require('./utils');
 
 // Problems
 const { twoNumberSum, twoNumberSum2 } = require('./easy/twoNumberSum');
@@ -21,6 +21,7 @@ const {middleNode} = require('./easy/middleNode');
 // MEDIUM
 const {threeNumberSum, threeNumberSumAlt} = require("./medium/threeNumberSum");
 const {removeKthNodeFromEnd} = require('./medium/removeKthNodeFromEnd');
+const {sumOfLinkedLists, sumOfLinkedListsPretty} = require('./medium/sumOfLinkedLists');
 
 
 
@@ -116,7 +117,7 @@ tree =        -1
   // const expectedNoDupes = new LinkedList(1).addMany([3, 4, 5, 6]).getNodesInArray();
   // const actualNoDupes = removeDuplicatesFromLinkedList(sortedLinkedList).getNodesInArray();
 
-  // console.log('Remove Duplicates From Linked List', actualNoDupes, "work?", actualNoDupes[3] === expectedNoDupes[3]);
+  // console.log('Remove Duplicates From Linked List', actualNoDupes, "work?", actualNoDupes.join() === expectedNoDupes.join());
 
 // ---------- MIDDLE NODE
 
@@ -133,4 +134,18 @@ tree =        -1
 // removeKthNodeFromEnd(linkedList10, 4);
 // const actualListWithKRemoved = linkedList10.getNodesInArray();
 
-// console.log('Remove Kth Node from End', actualListWithKRemoved, 'work?', expectedListWithKRemoved[2] === actualListWithKRemoved[2])
+// console.log('Remove Kth Node from End', actualListWithKRemoved, 'work?', expectedListWithKRemoved.join() === actualListWithKRemoved.join())
+
+// ------------- SUM OF LINKED LISTS
+// const L111 = new LinkedList(2).addMany([4, 7, 1]);
+// const L112 = new LinkedList(9).addMany([4,5]);
+// const expectedSumOfLinkedLists = new LinkedList(1).addMany([9, 2, 2]).getNodesInArray();
+// const actualSumOfLinkedLists = sumOfLinkedLists(L111, L112);
+// const actualSumInArray = getNodesInArray(actualSumOfLinkedLists)
+
+// console.log('Sum of Linked Lists', actualSumInArray, 'work?', expectedSumOfLinkedLists.join() === actualSumInArray.join())
+
+// const actualSumOfLinkedListsPretty = sumOfLinkedListsPretty(L111, L112);
+// const actualSumInArray2 = getNodesInArray(actualSumOfLinkedLists)
+
+// console.log('Sum of Linked Lists', actualSumInArray2, 'work?', expectedSumOfLinkedLists.join() === actualSumInArray2.join())
