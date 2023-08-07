@@ -23,6 +23,7 @@ const {threeNumberSum, threeNumberSumAlt} = require("./medium/threeNumberSum");
 const {removeKthNodeFromEnd} = require('./medium/removeKthNodeFromEnd');
 const {sumOfLinkedLists, sumOfLinkedListsPretty} = require('./medium/sumOfLinkedLists');
 const { mergingLinkedListsUsingTwoNodes, mergingLinkedListsUsingSet } = require('./medium/mergingLinkedLists');
+const { BST } = require('./medium/bstConstruction');
 
 
 
@@ -160,3 +161,69 @@ tree =        -1
 // const actualIntersectionInArray = getNodesInArray(actualIntersection);
 
 // console.log('Merging Linked Lists', actualIntersectionInArray, 'huh?', actualIntersection, "work?", actualIntersectionInArray.join() === expectedIntersection.join())
+
+
+// ------------------ CONSTRUCTING BST
+
+/* 
+CASES TO WORRY ABOUT
+ node.left.value < node.value <= node.right.value
+1) When the value < node.value --> move left
+2) if the value > node.value --> move right
+3. if ( value === node.value) // TRICKY
+   a) if (node.left & node.right) // has both children, find/swap with smallest value in right subtree & remove it
+       node.value = node.right.getMinValu();
+       node.remove(node.value, node);
+    b) if (!parent) // if removing root node with one child
+       I) if has left child,
+           - change current node value to left chile value
+           - change current node right to point to left child right (if any)
+           - change current node left to point to left child left (if any)
+        II) If has right child,
+           - change current node value to right child value
+           - change current node right to point to right child right (if any)
+           - change current node left to point to right child left (if any)
+    c) if parent // if removing node has parent & self as child
+        I) parent.left === this
+          - parent.left = this.left ? this.left : this.right
+        II) parent.right === this
+          - parent.left = this.left ? this.left : this.right
+*/
+
+// const root = new BST(10);
+// root.left = new BST(5);
+// root.left.left = new BST(2);
+// root.left.left.left = new BST(1);
+// root.left.right = new BST(5);
+// root.right = new BST(15);
+// root.right.left = new BST(13);
+// root.right.left.right = new BST(14);
+// root.right.right = new BST(22);
+
+// console.log('BST BEFORE', root.getNodesToArray([]));
+// console.log('Insert 12, 9, 209')
+// root.insert(12);
+// root.insert(9);
+// root.insert(209);
+// console.log('BST CONTAINS 12', root.contains(12));
+// console.log('BST CONTAINS 9', root.contains(9));
+// console.log('BST CONTAINS 209', root.contains(209));
+
+// console.log('Remove 209');
+// root.remove(209);
+// console.log('BST CONTAINS 209', root.contains(209));
+// console.log('BST POST INSERTS', root.getNodesToArray([]));
+// console.log('Remove 10: root');
+// root.remove(10)
+// const bstNodes = root.getNodesToArray([])
+
+// console.log('BST AFTER', bstNodes, bstNodes.join() === '12,5,2,1,5,9,15,13,14,22');
+
+// const root2 = new BST(10);
+// root2.insert(5);
+// root2.insert(15);
+
+// root2.remove(5);
+// root2.remove(15);
+// root2.remove(10);
+// console.log(root2.getNodesToArray())
