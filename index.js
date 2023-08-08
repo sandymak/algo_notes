@@ -16,6 +16,7 @@ const { evaluateExpressionTree} = require('./easy/evaluateExpressionTree');
 const {graph} = require('./easy/graphTraverse');
 const {removeDuplicatesFromLinkedList} = require('./easy/removeDuplicatesFromLinkedList');
 const {middleNode} = require('./easy/middleNode');
+const {getNthFib} = require('./easy/fibonacci');
 
 
 // MEDIUM
@@ -107,6 +108,19 @@ tree =        -1
 
 // const bstR12 = findClosestValueInBstRecursive(bst, 12);
 // console.log('Find Closest Value in BST Recursive', bstR12, "works?", bstR12 === 13);
+
+/* 
+ * 
+ * EASY - RECURSION
+ *
+*/
+
+// ~~~~~~~~~~~~~~~~~~~ GET NTH FIBINOCCI
+// const fib5 = getNthFib(5)
+// console.log('Fibonacci@5', fib5, fib5 === 3, "0,1,1,2");
+// const fib = getNthFib(6)
+// console.log('Fibonacci@6', fib, fib === 5, "0,1,1,2,3");
+
 
 /* 
  * 
