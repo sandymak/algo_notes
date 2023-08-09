@@ -17,6 +17,7 @@ const {graph} = require('./easy/graphTraverse');
 const {removeDuplicatesFromLinkedList} = require('./easy/removeDuplicatesFromLinkedList');
 const {middleNode} = require('./easy/middleNode');
 const {getNthFib} = require('./easy/fibonacci');
+const {productSum} = require('./easy/productSum');
 
 
 // MEDIUM
@@ -120,6 +121,10 @@ tree =        -1
 // console.log('Fibonacci@5', fib5, fib5 === 3, "0,1,1,2");
 // const fib = getNthFib(6)
 // console.log('Fibonacci@6', fib, fib === 5, "0,1,1,2,3");
+
+// ~~~~~~~~~~~~~~~~ GET PRODUCT SUM
+// const sum = productSum([5,2,[7,-1],3,[6,[-13,8],4]]);
+// console.log("Product Sum", sum, "huh?", sum === 12)
 
 
 /* 
@@ -249,7 +254,7 @@ CASES TO WORRY ABOUT
  *
 */
 
-// ~~~~~~~~~~~~~~~~~~~ GET PERMUTATIONS
+// -------------------- GET PERMUTATIONS
 // const options = [1,2,3];
 // const permutations = getPermutations(options);
 // const options2 = [1,2,3,4]
