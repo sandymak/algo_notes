@@ -25,7 +25,7 @@ const {removeKthNodeFromEnd} = require('./medium/removeKthNodeFromEnd');
 const {sumOfLinkedLists, sumOfLinkedListsPretty} = require('./medium/sumOfLinkedLists');
 const { mergingLinkedListsUsingTwoNodes, mergingLinkedListsUsingSet } = require('./medium/mergingLinkedLists');
 const { BST } = require('./medium/bstConstruction');
-
+const { getPermutations, getPermutations2 } = require('./medium/permutations');
 
 
 
@@ -241,3 +241,19 @@ CASES TO WORRY ABOUT
 // root2.remove(15);
 // root2.remove(10);
 // console.log(root2.getNodesToArray())
+
+
+/* 
+ * 
+ * MEDIUM - RECURSION
+ *
+*/
+
+// ~~~~~~~~~~~~~~~~~~~ GET PERMUTATIONS
+// const options = [1,2,3];
+// const permutations = getPermutations(options);
+// const options2 = [1,2,3,4]
+// const permutations2 = getPermutations2(options2)
+
+// console.log('GET Permutations', permutations)
+// console.log('GET Permutations 2', permutations2)
