@@ -27,9 +27,11 @@ const {sumOfLinkedLists, sumOfLinkedListsPretty} = require('./medium/sumOfLinked
 const { mergingLinkedListsUsingTwoNodes, mergingLinkedListsUsingSet } = require('./medium/mergingLinkedLists');
 const { BST } = require('./medium/bstConstruction');
 const { getPermutations, getPermutations2 } = require('./medium/permutations');
+const { maxSubsetSumNoAdjacent, maxSubsetSumNoAdjacent2 } = require('./medium/maxSubsetSumNoAdjacent');
+const { smallestDifference, smallestDifferenceTwoPointers } = require('./medium/smallestDifference');
 
-
-
+// LEETCODE 
+const leetCode = require("./leetcode");
 
 
 /* 
@@ -262,3 +264,28 @@ CASES TO WORRY ABOUT
 
 // console.log('GET Permutations', permutations)
 // console.log('GET Permutations 2', permutations2)
+
+/* 
+ * 
+ * MEDIUM - DYNAMIC PROGRAMMING
+ *
+*/
+// -------------------- GET MAX SUBSET SUM NO ADJACENT
+// const array = [75,105,120,75,90,135];
+// const maxSum = maxSubsetSumNoAdjacent(array);
+// const maxSum2 = maxSubsetSumNoAdjacent2(array);
+// console.log('Get Max Subset Sum No Adjacent', maxSum, maxSum2, maxSum === 330)
+
+
+/* 
+ * 
+ * MEDIUM - ARRAYS
+ *
+*/
+// ================= SMALLEST DIFFERENCE
+// const arrayOne = [-1,5,10,20,28,3];
+// const arrayTwo = [26,134,135,15,17];
+// const smallestPairs = smallestDifferenceTwoPointers(arrayOne, arrayTwo);
+
+// console.log('Smallest Difference', smallestPairs, 'true?', smallestPairs.join() === '28,26')
+
