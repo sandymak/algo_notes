@@ -30,6 +30,7 @@ const { getPermutations, getPermutations2 } = require('./medium/permutations');
 const { maxSubsetSumNoAdjacent, maxSubsetSumNoAdjacent2 } = require('./medium/maxSubsetSumNoAdjacent');
 const { smallestDifference, smallestDifferenceTwoPointers } = require('./medium/smallestDifference');
 const {moveElementToEnd} = require('./medium/moveElementToEnd');
+const {isMonotonic} = require('./medium/monotonicArray');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -297,3 +298,8 @@ CASES TO WORRY ABOUT
 // const movedArray = moveElementToEnd(arrayToMove, toMove);
 
 // console.log('Move Element To End', movedArray , 'true?', movedArray.join() === expectedMovedArray.join())
+
+// ================= MONOTONIC ARRAY
+const monotonicArray = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001];
+
+console.log("IS MONOTONIC ARRAY", isMonotonic(monotonicArray) === true)
