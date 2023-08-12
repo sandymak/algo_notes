@@ -29,6 +29,7 @@ const { BST } = require('./medium/bstConstruction');
 const { getPermutations, getPermutations2 } = require('./medium/permutations');
 const { maxSubsetSumNoAdjacent, maxSubsetSumNoAdjacent2 } = require('./medium/maxSubsetSumNoAdjacent');
 const { smallestDifference, smallestDifferenceTwoPointers } = require('./medium/smallestDifference');
+const {moveElementToEnd} = require('./medium/moveElementToEnd');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -289,3 +290,10 @@ CASES TO WORRY ABOUT
 
 // console.log('Smallest Difference', smallestPairs, 'true?', smallestPairs.join() === '28,26')
 
+// ================= MOVE ELEMENT TO END
+// const arrayToMove = [2,1,32,2,2,3,4,2];
+// const toMove = 2;
+// const expectedMovedArray = [4,1,32,3,2,2,2,2];
+// const movedArray = moveElementToEnd(arrayToMove, toMove);
+
+// console.log('Move Element To End', movedArray , 'true?', movedArray.join() === expectedMovedArray.join())
