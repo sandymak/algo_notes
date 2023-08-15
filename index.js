@@ -31,6 +31,7 @@ const { maxSubsetSumNoAdjacent, maxSubsetSumNoAdjacent2 } = require('./medium/ma
 const { smallestDifference, smallestDifferenceTwoPointers } = require('./medium/smallestDifference');
 const {moveElementToEnd} = require('./medium/moveElementToEnd');
 const {isMonotonic} = require('./medium/monotonicArray');
+const {spiralTraverse} = require('./medium/spiralTraverse');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -300,6 +301,17 @@ CASES TO WORRY ABOUT
 // console.log('Move Element To End', movedArray , 'true?', movedArray.join() === expectedMovedArray.join())
 
 // ================= MONOTONIC ARRAY
-const monotonicArray = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001];
+// const monotonicArray = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001];
 
-console.log("IS MONOTONIC ARRAY", isMonotonic(monotonicArray) === true)
+// console.log("IS MONOTONIC ARRAY", isMonotonic(monotonicArray) === true)
+
+// ================= SPIRAL TRAVERSE
+const matrix = [[1,2,3,4,5], [12,13,14,15,6], [11,10,9,8,7]];
+const matrix2 = [[1,2,3,4], [12,13,14,5], [11,16,15,6], [10,9,8,7]];
+const expectedTraversedSpiral = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+const expectedTraversedSpiral2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+const traversedMatrix = spiralTraverse(matrix);
+const traversedMatrix2 = spiralTraverse(matrix2);
+
+console.log('Spiral Traverse 1:', traversedMatrix, "huh?", traversedMatrix.join() === expectedTraversedSpiral.join());
+console.log('Spiral Traverse 2:', traversedMatrix2, "huh?", traversedMatrix2.join() === expectedTraversedSpiral2.join());
