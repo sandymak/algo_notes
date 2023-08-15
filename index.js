@@ -32,6 +32,7 @@ const { smallestDifference, smallestDifferenceTwoPointers } = require('./medium/
 const {moveElementToEnd} = require('./medium/moveElementToEnd');
 const {isMonotonic} = require('./medium/monotonicArray');
 const {spiralTraverse} = require('./medium/spiralTraverse');
+const {longestPeak, longestPeakUgly} = require('./medium/longestPeak');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -306,12 +307,20 @@ CASES TO WORRY ABOUT
 // console.log("IS MONOTONIC ARRAY", isMonotonic(monotonicArray) === true)
 
 // ================= SPIRAL TRAVERSE
-const matrix = [[1,2,3,4,5], [12,13,14,15,6], [11,10,9,8,7]];
-const matrix2 = [[1,2,3,4], [12,13,14,5], [11,16,15,6], [10,9,8,7]];
-const expectedTraversedSpiral = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-const expectedTraversedSpiral2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
-const traversedMatrix = spiralTraverse(matrix);
-const traversedMatrix2 = spiralTraverse(matrix2);
+// const matrix = [[1,2,3,4,5], [12,13,14,15,6], [11,10,9,8,7]];
+// const matrix2 = [[1,2,3,4], [12,13,14,5], [11,16,15,6], [10,9,8,7]];
+// const expectedTraversedSpiral = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+// const expectedTraversedSpiral2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+// const traversedMatrix = spiralTraverse(matrix);
+// const traversedMatrix2 = spiralTraverse(matrix2);
 
-console.log('Spiral Traverse 1:', traversedMatrix, "huh?", traversedMatrix.join() === expectedTraversedSpiral.join());
-console.log('Spiral Traverse 2:', traversedMatrix2, "huh?", traversedMatrix2.join() === expectedTraversedSpiral2.join());
+// console.log('Spiral Traverse 1:', traversedMatrix, "huh?", traversedMatrix.join() === expectedTraversedSpiral.join());
+// console.log('Spiral Traverse 2:', traversedMatrix2, "huh?", traversedMatrix2.join() === expectedTraversedSpiral2.join());
+
+// ================= LONGEST PEAK
+const arrayWithPeaks =  [1,2,3,3,4,0,10,6,5,-1,-3,2,3];
+const peakLength = longestPeak(arrayWithPeaks);
+const peakLengthUgly = longestPeakUgly(arrayWithPeaks);
+
+console.log('Get Longest Peak:', peakLength, "is true?", peakLength === 6)
+console.log('Get Longest Peak:', peakLengthUgly, "is true?", peakLengthUgly === 6)
