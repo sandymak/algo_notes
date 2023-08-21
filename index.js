@@ -33,6 +33,7 @@ const {moveElementToEnd} = require('./medium/moveElementToEnd');
 const {isMonotonic} = require('./medium/monotonicArray');
 const {spiralTraverse} = require('./medium/spiralTraverse');
 const {longestPeak, longestPeakUgly} = require('./medium/longestPeak');
+const {arrayOfProducts, arrayOfProductsPerformant} = require('./medium/arrayOfProducts');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -318,9 +319,16 @@ CASES TO WORRY ABOUT
 // console.log('Spiral Traverse 2:', traversedMatrix2, "huh?", traversedMatrix2.join() === expectedTraversedSpiral2.join());
 
 // ================= LONGEST PEAK
-const arrayWithPeaks =  [1,2,3,3,4,0,10,6,5,-1,-3,2,3];
-const peakLength = longestPeak(arrayWithPeaks);
-const peakLengthUgly = longestPeakUgly(arrayWithPeaks);
+// const arrayWithPeaks =  [1,2,3,3,4,0,10,6,5,-1,-3,2,3];
+// const peakLength = longestPeak(arrayWithPeaks);
+// const peakLengthUgly = longestPeakUgly(arrayWithPeaks);
 
-console.log('Get Longest Peak:', peakLength, "is true?", peakLength === 6)
-console.log('Get Longest Peak:', peakLengthUgly, "is true?", peakLengthUgly === 6)
+// console.log('Get Longest Peak:', peakLength, "is true?", peakLength === 6)
+// console.log('Get Longest Peak:', peakLengthUgly, "is true?", peakLengthUgly === 6)
+
+// ================= ARRAY OF PRODUCTS
+// const array = [5,1,4,2];
+// const expectedProducts = [8, 40, 10, 20];
+// const products = arrayOfProductsPerformant(array);
+
+// console.log('Get Array of Products', products, "is true?", products.join() === expectedProducts.join())
