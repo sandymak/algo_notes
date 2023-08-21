@@ -336,7 +336,7 @@ CASES TO WORRY ABOUT
 
 
 // ================= First Duplicate Value
-const array = [2,1,5,3,3,2,4];
-const duplicateVal = firstDuplicateValueTrick(array);
+// const array = [2,1,5,3,3,2,4];
+// const duplicateVal = firstDuplicateValueTrick(array);
 
-console.log('First Duplicate Value', duplicateVal, "is true?", 3 === duplicateVal) 
+// console.log('First Duplicate Value', duplicateVal, "is true?", 3 === duplicateVal) 
