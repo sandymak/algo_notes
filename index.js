@@ -34,6 +34,7 @@ const {isMonotonic} = require('./medium/monotonicArray');
 const {spiralTraverse} = require('./medium/spiralTraverse');
 const {longestPeak, longestPeakUgly} = require('./medium/longestPeak');
 const {arrayOfProducts, arrayOfProductsPerformant} = require('./medium/arrayOfProducts');
+const {firstDuplicateValue, firstDuplicateValueTrick} = require('./medium/firstDuplicateValue');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -332,3 +333,10 @@ CASES TO WORRY ABOUT
 // const products = arrayOfProductsPerformant(array);
 
 // console.log('Get Array of Products', products, "is true?", products.join() === expectedProducts.join())
+
+
+// ================= First Duplicate Value
+const array = [2,1,5,3,3,2,4];
+const duplicateVal = firstDuplicateValueTrick(array);
+
+console.log('First Duplicate Value', duplicateVal, "is true?", 3 === duplicateVal) 
