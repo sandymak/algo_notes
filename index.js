@@ -35,6 +35,7 @@ const {spiralTraverse} = require('./medium/spiralTraverse');
 const {longestPeak, longestPeakUgly} = require('./medium/longestPeak');
 const {arrayOfProducts, arrayOfProductsPerformant} = require('./medium/arrayOfProducts');
 const {firstDuplicateValue, firstDuplicateValueTrick} = require('./medium/firstDuplicateValue');
+const {bestSeat} = require('./medium/bestSeat');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -340,3 +341,10 @@ CASES TO WORRY ABOUT
 // const duplicateVal = firstDuplicateValueTrick(array);
 
 // console.log('First Duplicate Value', duplicateVal, "is true?", 3 === duplicateVal) 
+
+
+// ================= BEST SEAT
+const theatreRow = [1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1];
+const bestSeatIndex = bestSeat(theatreRow);
+
+console.log('Best Seat = ', bestSeatIndex, "true?", bestSeatIndex === 3);
