@@ -37,6 +37,7 @@ const {arrayOfProducts, arrayOfProductsPerformant} = require('./medium/arrayOfPr
 const {firstDuplicateValue, firstDuplicateValueTrick} = require('./medium/firstDuplicateValue');
 const {bestSeat} = require('./medium/bestSeat');
 const {zeroSumSubarray} = require('./medium/zeroSumSubarray');
+const {missingNumbers} = require('./medium/missingNumbers');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -355,3 +356,9 @@ CASES TO WORRY ABOUT
 // const hasZeroSumSubarray = zeroSumSubarray(array);
 
 // console.log('Has Zero Sum Subarray? = ', hasZeroSumSubarray, "expected", hasZeroSumSubarray === true)
+
+// ================= MISSING NUMBERS
+// const numbers =  [4,5,1,3];
+// const missingNums = missingNumbers(numbers);
+// const expectedMissingNums = [2,6];
+// console.log('Get Missing Numbers = ', missingNums, "is expected?", missingNums.join() === expectedMissingNums.join())
