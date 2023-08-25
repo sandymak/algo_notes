@@ -36,6 +36,7 @@ const {longestPeak, longestPeakUgly} = require('./medium/longestPeak');
 const {arrayOfProducts, arrayOfProductsPerformant} = require('./medium/arrayOfProducts');
 const {firstDuplicateValue, firstDuplicateValueTrick} = require('./medium/firstDuplicateValue');
 const {bestSeat} = require('./medium/bestSeat');
+const {zeroSumSubarray} = require('./medium/zeroSumSubarray');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
@@ -344,7 +345,13 @@ CASES TO WORRY ABOUT
 
 
 // ================= BEST SEAT
-const theatreRow = [1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1];
-const bestSeatIndex = bestSeat(theatreRow);
+// const theatreRow = [1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1];
+// const bestSeatIndex = bestSeat(theatreRow);
 
-console.log('Best Seat = ', bestSeatIndex, "true?", bestSeatIndex === 3);
+// console.log('Best Seat = ', bestSeatIndex, "true?", bestSeatIndex === 3);
+
+// ================= ZERO SUM SUBARRAY
+// const array = [-2,2]
+// const hasZeroSumSubarray = zeroSumSubarray(array);
+
+// console.log('Has Zero Sum Subarray? = ', hasZeroSumSubarray, "expected", hasZeroSumSubarray === true)
