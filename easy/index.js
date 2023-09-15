@@ -1,5 +1,6 @@
 const { caesarCipherEncryptor } = require('./caesarCipher');
 const { runLengthEncoding } = require('./runLengthEncoding');
+const { commonCharacters } = require('./commonCharacters');
 
 /* 
  * 
@@ -21,7 +22,19 @@ const { runLengthEncoding } = require('./runLengthEncoding');
 */
 // ================= RUN-LENGTH ENCODING
 
-const actualEncoded = runLengthEncoding('AAAAAAAAAAAAAAAAAAAAAAABBCCCCDD');
-const expectedEncoded = '9A9A5A2B4C2D';
+// const actualEncoded = runLengthEncoding('AAAAAAAAAAAAAAAAAAAAAAABBCCCCDD');
+// const expectedEncoded = '9A9A5A2B4C2D';
 
-console.log('RUN-LENGTH ENCODING =', actualEncoded, "|| is correct?", actualEncoded === expectedEncoded )
+// console.log('RUN-LENGTH ENCODING =', actualEncoded, "|| is correct?", actualEncoded === expectedEncoded )
+
+/* 
+ * 
+ * EASY - STRINGS
+ *
+*/
+// ================= Common Characters
+
+const actualCharacters = ['b', 'c'];
+const expectedCharacters = commonCharacters(['abc', 'bcd', 'cbad']);
+
+console.log('Common Characters =', actualCharacters, "|| is correct?", actualCharacters.join() === expectedCharacters.join() )
