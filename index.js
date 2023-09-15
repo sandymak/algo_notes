@@ -38,9 +38,13 @@ const {firstDuplicateValue, firstDuplicateValueTrick} = require('./medium/firstD
 const {bestSeat} = require('./medium/bestSeat');
 const {zeroSumSubarray} = require('./medium/zeroSumSubarray');
 const {missingNumbers} = require('./medium/missingNumbers');
+const {majorityElement} = require('./medium/majorityElement');
 
 // LEETCODE 
 const leetCode = require("./leetcode");
+
+// EASY PROBLEMS
+const easy = require('./easy')
 
 
 /* 
@@ -362,3 +366,11 @@ CASES TO WORRY ABOUT
 // const missingNums = missingNumbers(numbers);
 // const expectedMissingNums = [2,6];
 // console.log('Get Missing Numbers = ', missingNums, "is expected?", missingNums.join() === expectedMissingNums.join())
+
+
+// ================= MAJORITY ELEMENT
+const elements = [3,2,2,2,1,2,1];
+const majority = majorityElement(elements);
+
+console.log('Get Majority Element = ', majority, "isExpected?", majority === 2)
+
