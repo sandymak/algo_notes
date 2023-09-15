@@ -1,6 +1,7 @@
 const { caesarCipherEncryptor } = require('./caesarCipher');
 const { runLengthEncoding } = require('./runLengthEncoding');
 const { commonCharacters } = require('./commonCharacters');
+const { generateDocument } = require('./generateDocument');
 
 /* 
  * 
@@ -34,7 +35,20 @@ const { commonCharacters } = require('./commonCharacters');
 */
 // ================= Common Characters
 
-const actualCharacters = ['b', 'c'];
-const expectedCharacters = commonCharacters(['abc', 'bcd', 'cbad']);
+// const actualCharacters = ['b', 'c'];
+// const expectedCharacters = commonCharacters(['abc', 'bcd', 'cbad']);
 
-console.log('Common Characters =', actualCharacters, "|| is correct?", actualCharacters.join() === expectedCharacters.join() )
+// console.log('Common Characters =', actualCharacters, "|| is correct?", actualCharacters.join() === expectedCharacters.join() )
+
+
+/* 
+ * 
+ * EASY - STRINGS
+ *
+*/
+// ================= Generate Documents
+
+const characters = 'Bste!hetsi ogEAxpelrt x ';
+const document = 'AlgoExpert is the Best!'
+
+console.log('Can Generate Document =', generateDocument(characters, document), "|| is correct?", generateDocument(characters, document) === true )
