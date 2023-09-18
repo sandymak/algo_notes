@@ -3,6 +3,7 @@ const { runLengthEncoding } = require('./runLengthEncoding');
 const { commonCharacters } = require('./commonCharacters');
 const { generateDocument } = require('./generateDocument');
 const { firstNonRepeatingCharacter } = require('./firstNonRepeatingCharacter');
+const { semordnilap } = require('./semordnilap');
 
 /* 
  * 
@@ -61,7 +62,20 @@ const { firstNonRepeatingCharacter } = require('./firstNonRepeatingCharacter');
  *
 */
 // ================= First Non-repeating Character
-const sampleString = 'abcdadfghg';
-const index = firstNonRepeatingCharacter(sampleString);
+// const sampleString = 'abcdadfghg';
+// const index = firstNonRepeatingCharacter(sampleString);
 
-console.log('First non-repeating character index = ', index, 'isTrue?', index === 1)
+// console.log('First non-repeating character index = ', index, 'isTrue?', index === 1)
+
+
+/* 
+ * 
+ * EASY - STRINGS
+ *
+*/
+// ================= Semordnilap 
+const words = ['abc', 'poop', 'like', 'poop', 'cbs', 'cba'];
+const expectedPairs = [[['poop', 'poop'], 'abc', 'cba'],];
+const actualPairs = semordnilap(words);
+
+console.log('Get List of palidromes = ', actualPairs, "isTrue?" , expectedPairs.join() === actualPairs.join())
