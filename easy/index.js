@@ -2,6 +2,7 @@ const { caesarCipherEncryptor } = require('./caesarCipher');
 const { runLengthEncoding } = require('./runLengthEncoding');
 const { commonCharacters } = require('./commonCharacters');
 const { generateDocument } = require('./generateDocument');
+const { firstNonRepeatingCharacter } = require('./firstNonRepeatingCharacter');
 
 /* 
  * 
@@ -48,7 +49,19 @@ const { generateDocument } = require('./generateDocument');
 */
 // ================= Generate Documents
 
-const characters = 'Bste!hetsi ogEAxpelrt x ';
-const document = 'AlgoExpert is the Best!'
+// const characters = 'Bste!hetsi ogEAxpelrt x ';
+// const document = 'AlgoExpert is the Best!'
 
-console.log('Can Generate Document =', generateDocument(characters, document), "|| is correct?", generateDocument(characters, document) === true )
+// console.log('Can Generate Document =', generateDocument(characters, document), "|| is correct?", generateDocument(characters, document) === true )
+
+
+/* 
+ * 
+ * EASY - STRINGS
+ *
+*/
+// ================= First Non-repeating Character
+const sampleString = 'abcdadfghg';
+const index = firstNonRepeatingCharacter(sampleString);
+
+console.log('First non-repeating character index = ', index, 'isTrue?', index === 1)
