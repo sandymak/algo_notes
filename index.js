@@ -46,6 +46,9 @@ const leetCode = require("./leetcode");
 // EASY PROBLEMS
 const easy = require('./easy')
 
+// MEDIUM PROBLEMS
+const medium = require('./medium');
+
 
 /* 
  * 

@@ -74,8 +74,8 @@ const { semordnilap } = require('./semordnilap');
  *
 */
 // ================= Semordnilap 
-const words = ['abc', 'poop', 'like', 'poop', 'cbs', 'cba'];
-const expectedPairs = [[['poop', 'poop'], 'abc', 'cba'],];
-const actualPairs = semordnilap(words);
+// const words = ['abc', 'poop', 'like', 'poop', 'cbs', 'cba'];
+// const expectedPairs = [[['poop', 'poop'], 'abc', 'cba'],];
+// const actualPairs = semordnilap(words);
 
-console.log('Get List of palidromes = ', actualPairs, "isTrue?" , expectedPairs.join() === actualPairs.join())
+// console.log('Get List of palidromes = ', actualPairs, "isTrue?" , expectedPairs.join() === actualPairs.join())
