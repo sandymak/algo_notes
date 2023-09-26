@@ -3,6 +3,7 @@ const {groupAnagrams, groupAnagramsSort} = require('./groupAnagrams');
 const {validIPAddresses } = require('./validIPAddresses');
 const {reverseWordsInString } = require('./reverseWordsInString');
 const {minimumCharactersForWords } = require('./minimumCharactersForWords');
+const {oneEdit } = require('./oneEdit');
 
 
 
@@ -80,3 +81,13 @@ const {minimumCharactersForWords } = require('./minimumCharactersForWords');
 // const expectedCharacters = ['t', 't', 'h', 'i', 's', 'a', 'd', 'd', 'e', 'e', 'm', '!'];
 // const actualCharacters = minimumCharactersForWords(arrayOfWords);
 // console.log('Minimum Charactes for Words = ', actualCharacters, 'is Expected??', expectedCharacters.join() === actualCharacters.join())
+
+/* 
+ * 
+ * MEDIUM - STRINGS
+ *
+*/
+// ================= One Edit
+// const stringOne = 'hello';
+// const stringTwo = 'hllo';
+// console.log('Can make one edit?', oneEdit(stringOne, stringTwo))
