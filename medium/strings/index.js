@@ -2,6 +2,7 @@ const {longestPalindromicSubstring, longestPalindromicSubstring2} = require('./l
 const {groupAnagrams, groupAnagramsSort} = require('./groupAnagrams');
 const {validIPAddresses } = require('./validIPAddresses');
 const {reverseWordsInString } = require('./reverseWordsInString');
+const {minimumCharactersForWords } = require('./minimumCharactersForWords');
 
 
 
@@ -68,3 +69,14 @@ const {reverseWordsInString } = require('./reverseWordsInString');
 // const expectedReversedSentence = 'f    r  evr th4ng best! the is   AlgoExpert ';
 // const actualReversedSentence = reverseWordsInString(sentence);
 // console.log(" Original Sentence =", sentence, `\n Reverse Words in String = `, actualReversedSentence, `\nis equal ?`, expectedReversedSentence === actualReversedSentence)
+
+/* 
+ * 
+ * MEDIUM - STRINGS
+ *
+*/
+// ================= Minimum Characters For Words
+// const arrayOfWords =  ['this', 'that', 'did', 'deed', 'them!', 'a'];
+// const expectedCharacters = ['t', 't', 'h', 'i', 's', 'a', 'd', 'd', 'e', 'e', 'm', '!'];
+// const actualCharacters = minimumCharactersForWords(arrayOfWords);
+// console.log('Minimum Charactes for Words = ', actualCharacters, 'is Expected??', expectedCharacters.join() === actualCharacters.join())
