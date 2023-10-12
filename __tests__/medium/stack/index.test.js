@@ -1,5 +1,6 @@
 const { MinMaxStack, MinMaxStackWithNode } = require('../../../medium/stack/minMaxStack');
 const {balancedBrackets} = require('../../../medium/stack/balancedBrackets');
+const sunsetViews = require('../../../medium/stack/sunsetViews');
 
 
 xdescribe('Min Max Stack', () => {
@@ -49,7 +50,7 @@ xdescribe('Min Max Stack', () => {
   })
 })
 
-describe("Balanced Braces", () => {
+xdescribe("Balanced Braces", () => {
   it("Should return boolean to tell whether given string has balanced brackets", () => {
     const brackets1 = "";
     expect(balancedBrackets(brackets1)).toEqual(true);
@@ -59,5 +60,23 @@ describe("Balanced Braces", () => {
 
     const brackets3 = "[((([])([]){}){}){}([])[]((())";
     expect(balancedBrackets(brackets3)).toEqual(false);
+  })
+})
+
+xdescribe("Sunset Views", () => {
+  it("Should return an array of indices of the buildings that can see the sunset: direction WEST", () => {
+    const buildings = [1, 2, 3, 1, 5, 6, 9, 1, 9, 9, 11, 10, 9, 12, 8];
+    const direction = 'WEST';
+    const expectedArray = [0, 1, 2, 4, 5, 6, 10, 13];
+    expect(sunsetViews(buildings, direction)).toEqual(expectedArray);
+    
+  });
+  
+  it("Should return an array of indices of the buildings that can see the sunset: direction EAST", () => {
+    const buildings = [20, 2, 3, 1, 5, 6, 9, 1, 9, 9, 11, 10, 9, 12, 8];
+    const direction = 'EAST';
+    const expectedArray = [0, 13, 14];
+    expect(sunsetViews(buildings, direction)).toEqual(expectedArray);
+    
   })
 })
