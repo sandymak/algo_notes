@@ -1,2 +1,3 @@
-// MEDIUM STACK PROBLEMS
-const mediumStackProblems = require('./stack');
+const bestDigits = require('./bestDigits');
+
+bestDigits('911111111119999999999',10);
