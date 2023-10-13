@@ -3,6 +3,7 @@ const {balancedBrackets} = require('../../../medium/stack/balancedBrackets');
 const sunsetViews = require('../../../medium/stack/sunsetViews');
 const bestDigits = require('../../../medium/stack/bestDigits');
 const sortStack = require('../../../medium/stack/sortStack');
+const nextGreaterElement = require('../../../medium/stack/nextGreaterElement');
 
 
 xdescribe('Min Max Stack', () => {
@@ -100,10 +101,18 @@ xdescribe('Best Digits', () => {
 
 })
 
-describe('Sort Stack', () => {
+xdescribe('Sort Stack', () => {
   it("Shoud sort stack in ascending order", () => {
     const stack = [4,7,-5,0,1,-2,2];
     const expected = [-5, -2, 0, 1, 2, 4, 7];
     expect(sortStack(stack)).toStrictEqual(expected);
   });
+})
+
+xdescribe("Next Greater Element", () => {
+  it("Should returns a new array contianing, at each index,the next elemener in the input array that's greater than the element at that index in the input array.", () => {
+    const input = [-8, -1, -1, -2, -4, -5, -6, 0, -9, -91, -2, 8];
+    const expected = [-1, 0, 0, 0, 0, 0, 0, 8, -2, -2, 8, -1];
+    expect(nextGreaterElement(input)).toEqual(expected);
+  })
 })
