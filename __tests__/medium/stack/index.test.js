@@ -2,6 +2,7 @@ const { MinMaxStack, MinMaxStackWithNode } = require('../../../medium/stack/minM
 const {balancedBrackets} = require('../../../medium/stack/balancedBrackets');
 const sunsetViews = require('../../../medium/stack/sunsetViews');
 const bestDigits = require('../../../medium/stack/bestDigits');
+const sortStack = require('../../../medium/stack/sortStack');
 
 
 xdescribe('Min Max Stack', () => {
@@ -82,7 +83,7 @@ xdescribe("Sunset Views", () => {
   })
 })
 
-describe('Best Digits', () => {
+xdescribe('Best Digits', () => {
   it ('should return the largest possible number after removing given number of digits', () => {
     const number = '11111111119999999999';
     const digits = 10;
@@ -96,6 +97,13 @@ describe('Best Digits', () => {
     const expected2 = '6839';
     expect(bestDigits(number2, digits2)).toEqual(expected2);
   })
-  
 
+})
+
+describe('Sort Stack', () => {
+  it("Shoud sort stack in ascending order", () => {
+    const stack = [4,7,-5,0,1,-2,2];
+    const expected = [-5, -2, 0, 1, 2, 4, 7];
+    expect(sortStack(stack)).toStrictEqual(expected);
+  });
 })
