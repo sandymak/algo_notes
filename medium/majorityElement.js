@@ -79,7 +79,7 @@ function majorityElement(array) {
     return accumulator
   }, [])
 
-  console.log('categories', categories)
+  // console.log('categories', categories)
 
   return categories
 }
