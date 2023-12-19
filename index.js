@@ -372,8 +372,8 @@ CASES TO WORRY ABOUT
 
 
 // ================= MAJORITY ELEMENT
-const elements = [3,2,2,2,1,2,1];
-const majority = majorityElement(elements);
+// const elements = [3,2,2,2,1,2,1];
+// const majority = majorityElement(elements);
 
 // console.log('Get Majority Element = ', majority, "isExpected?", majority === 2)
 
