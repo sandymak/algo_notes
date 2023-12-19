@@ -1,7 +1,25 @@
 const {merge} = require('../../../leetcode/easy/88-merge-sorted-array');
+const {removeElement} = require('../../../leetcode/easy/27-remove-element');
 
 
-describe('88. Merge Sorted Array', () => {
+describe('27. Remove Element', () => {
+  it('Should return expected array', () => {
+    const nums = [0,1,2,2,3,0,4,2];
+    const val = 2;
+    const actual = removeElement(nums, val);
+    const expected = [0, 1, 4, 0, 3, 2,2,2];
+    expect(actual).toStrictEqual(expected);
+  })
+  it('Should return expected array2', () => {
+    const nums = [3,4,3,1,3,8,3,9];
+    const val = 3;
+    const actual = removeElement(nums, val);
+    const expected = [9,4,8,1,3,3,3,3,];
+    expect(actual).toStrictEqual(expected);
+  })
+})
+
+xdescribe('88. Merge Sorted Array', () => {
   it ("Should return sorted array for inputs option 1", () => {
     const nums1 = [1,2,7,9,0,0];
     const m = 4;

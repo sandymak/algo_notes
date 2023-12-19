@@ -3,7 +3,8 @@ const {combinationSum2} = require('./medium/40-combinationSum2');
 const {convert} = require('./convert');
 const {findShortestFreeBlock} = require('./timesheet');
 const { addLarge } = require('./addLarge');
-const {merge} = require('./easy/88-merge-sorted-array');
+
+const easyLeetCodeProblems = require('./easy')
 
 
 /* 
