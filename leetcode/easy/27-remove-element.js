@@ -23,7 +23,7 @@ var removeElement = function (nums, val) {
         }
     }
   console.log('count is', count)
-  console.log('CHANGD nums is', nums)
+  console.log('CHANGED nums is', nums)
     return nums
 }
 
