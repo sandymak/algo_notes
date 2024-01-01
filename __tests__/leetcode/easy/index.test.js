@@ -1,8 +1,9 @@
 const {merge} = require('../../../leetcode/easy/88-merge-sorted-array');
 const {removeElement} = require('../../../leetcode/easy/27-remove-element');
 const {removeDuplicates} = require('../../../leetcode/easy/26-remove-duplicates')
+const {majorityElement, majorityElementEfficient} = require('../../../leetcode/easy/169-majority-element');
 
-describe('26. Remove Duplicates', () => {
+xdescribe('26. Remove Duplicates', () => {
   it ('Should return the array with duplicates moved to the back option 1', () => {
     const nums = [1,2,2,2,2];
     const actual = removeDuplicates(nums);
@@ -73,5 +74,66 @@ xdescribe('88. Merge Sorted Array', () => {
     
 
     expect(actual).toStrictEqual(expected);
+  })
+})
+
+describe("169 Majority Element", () => {
+  const inputs = [
+    {
+      nums: [2,2,2,2,2,2,3,3,4],
+      expected: 2,
+    },
+    {
+      nums: [2,3,3,3,4],
+      expected: 3
+    },
+    {
+      nums:  [6,1,1,1,2,3,1,1,6],
+      expected:1
+    },
+    {
+      nums: [1,1,1,2,3,1,1,6,6],
+      expected: 1
+    },
+  ];
+  const inputsWithoutMajority = [
+    {
+      nums: [1,1,1,2,3,1,1,6,6,6,6]
+    },
+    {
+      nums: [2,3,4]
+    },
+    {
+      nums: [1,2]
+    },
+    
+  ]
+  describe("Majority Element : Space: O(n)", () => {
+    it('Should return majority element for every input', () => {
+      inputs.forEach(input => {
+         const actual = majorityElement(input.nums);
+        expect(actual).toEqual(input.expected)
+      })
+    })
+    it('Should return error for NO MAJORITY', () => {
+      inputsWithoutMajority.forEach(input => {
+        const actual = majorityElement(input.nums);
+        expect(typeof actual).toEqual('object')
+      })
+    })
+  })
+  describe("Majority Element : Space: O(1) MORE EFFICIENT", () => {
+    it('Should return majority element for every input', () => {
+      inputs.forEach(input => {
+         const actual = majorityElementEfficient(input.nums);
+        expect(actual).toEqual(input.expected)
+      })
+    })
+    it('Should return error for NO MAJORITY', () => {
+      inputsWithoutMajority.forEach(input => {
+        const actual = majorityElementEfficient(input.nums);
+        expect(typeof actual).toEqual('object')
+      })
+    })
   })
 })

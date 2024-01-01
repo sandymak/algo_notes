@@ -54,6 +54,7 @@ var removeDuplicates = function(nums) {
       if (j >= nums.length) {
         // console.log('leetcode 26. Remove Duplicate NEW nums = ',nums);
         // console.log('Number of distinct integers are=', count);
+        return nums
         return count; 
       }
     }
@@ -62,7 +63,7 @@ var removeDuplicates = function(nums) {
 
   // console.log('leetcode 26. Remove Duplicate NEW nums = ',nums);
   // console.log('Number of distinct integers are=', count);
-
+  return nums;
   return count;
 
 

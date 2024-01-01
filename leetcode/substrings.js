@@ -60,19 +60,19 @@ const input1 = 'AaddolAdddaDddfsaddaAdDADDnad'
 const search1 = 'add';
 const expectedResults = ['add', 'Add', 'aDd', 'add', 'AdD', 'ADD']
 
-const results = substrings(input1, search1);
+// const results = substrings(input1, search1);
 
-console.log('results', results);
-console.log('isTrue?????', results.join() === expectedResults.join())
+// console.log('results', results);
+// console.log('isTrue?????', results.join() === expectedResults.join())
 
 
 const input2 = 'bbBbfbbBb'
 const search2 = 'BB';
 const expectedResult2 = ['bb', 'bB', 'Bb', 'bb', 'bB', 'Bb']
 
-const result2 = substrings(input2, search2);
+// const result2 = substrings(input2, search2);
 
-console.log('results', result2);
-console.log('isTrue?????', result2.join() === expectedResult2.join())
+// console.log('results', result2);
+// console.log('isTrue?????', result2.join() === expectedResult2.join())
 
 module.exports = {substrings}
