@@ -3,6 +3,7 @@ const {combinationSum2} = require('./medium/40-combinationSum2');
 const {convert} = require('./convert');
 const {findShortestFreeBlock} = require('./timesheet');
 const { addLarge } = require('./addLarge');
+const {substrings} = require('./substrings');
 
 const easyLeetCodeProblems = require('./easy')
 
@@ -45,3 +46,9 @@ const easyLeetCodeProblems = require('./easy')
 // addLarge('91', '29'); // '120'
 // addLarge("91", '290'); // '381'
 // console.log('is true?' , addLarge('91000000000192211', '311219000') == '91000000311411211', '91000000311411211' == '91000000311411211')
+
+
+// ========== Substrings
+
+console.log('Find all instances of a substring in a larger string and return the string with tags around the instances. Find all hits regardless of casing, but preserve the original casing in the return value.')
+

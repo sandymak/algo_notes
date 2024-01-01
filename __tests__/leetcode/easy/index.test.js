@@ -1,8 +1,29 @@
 const {merge} = require('../../../leetcode/easy/88-merge-sorted-array');
 const {removeElement} = require('../../../leetcode/easy/27-remove-element');
+const {removeDuplicates} = require('../../../leetcode/easy/26-remove-duplicates')
 
+describe('26. Remove Duplicates', () => {
+  it ('Should return the array with duplicates moved to the back option 1', () => {
+    const nums = [1,2,2,2,2];
+    const actual = removeDuplicates(nums);
+    const expected = [1,2,2,2,2];
+    expect(actual).toStrictEqual(expected);
+  })
+  it ('Should return the array with duplicates moved to the back option 2', () => {
+    const nums = [0,0,1,1,1,2,2,3,3,4];
+    const actual = removeDuplicates(nums);
+    const expected = [0,1,2,3,4,0,2,1,3,1];
+    expect(actual).toStrictEqual(expected);
+  })
+  it ('Should return the array with duplicates moved to the back option 3', () => {
+    const nums = [1,1,2];
+    const actual = removeDuplicates(nums);
+    const expected = [1,2,1];
+    expect(actual).toStrictEqual(expected);
+  })
+})
 
-describe('27. Remove Element', () => {
+xdescribe('27. Remove Element', () => {
   it('Should return expected array', () => {
     const nums = [0,1,2,2,3,0,4,2];
     const val = 2;

@@ -22,11 +22,11 @@ var removeElement = function (nums, val) {
             j -= 1
         }
     }
-  console.log('count is', count)
-  console.log('CHANGED nums is', nums)
+  // console.log('leetcode 27. removeElement ===> count is', count)
+  // console.log('CHANGED nums is', nums)
     return nums
 }
 
-console.log('removeElement', removeElement([0,1,2,2,3,0,4,2], 2))
+// console.log('removeElement', removeElement([0,1,2,2,3,0,4,2], 2))
 
 module.exports = {removeElement}
