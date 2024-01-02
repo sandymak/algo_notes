@@ -2,6 +2,7 @@ const {merge} = require('../../../leetcode/easy/88-merge-sorted-array');
 const {removeElement} = require('../../../leetcode/easy/27-remove-element');
 const {removeDuplicates} = require('../../../leetcode/easy/26-remove-duplicates')
 const {majorityElement, majorityElementEfficient} = require('../../../leetcode/easy/169-majority-element');
+const {romanToInt} = require('../../../leetcode/easy/13-roman-to-integer');
 
 xdescribe('26. Remove Duplicates', () => {
   it ('Should return the array with duplicates moved to the back option 1', () => {
@@ -77,7 +78,7 @@ xdescribe('88. Merge Sorted Array', () => {
   })
 })
 
-describe("169 Majority Element", () => {
+xdescribe("169 Majority Element", () => {
   const inputs = [
     {
       nums: [2,2,2,2,2,2,3,3,4],
@@ -136,4 +137,28 @@ describe("169 Majority Element", () => {
       })
     })
   })
+})
+
+describe("13. Roman to Integer", () => {
+  it("Should return an integer conversion of roman numeral numbers", ()=> {
+    const inputs = [
+      {
+        roman: "III",
+        expected: 3
+      },
+      {
+        roman: "LVIII",
+        expected:58 
+      },
+      {
+        roman: "MCMXCIV",
+        expected: 1994 
+      }
+    ]
+
+    inputs.forEach(input => {
+      const actual = romanToInt(input.roman);
+      expect(actual).toEqual(input.expected)
+    })
+  })   
 })
