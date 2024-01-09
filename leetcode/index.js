@@ -4,6 +4,7 @@ const {convert} = require('./convert');
 const {findShortestFreeBlock} = require('./timesheet');
 const { addLarge } = require('./addLarge');
 const {substrings} = require('./substrings');
+const {highlight} = require('./highlight');
 
 const easyLeetCodeProblems = require('./easy')
 
@@ -50,5 +51,9 @@ const easyLeetCodeProblems = require('./easy')
 
 // ========== Substrings
 
-console.log('Find all instances of a substring in a larger string and return the string with tags around the instances. Find all hits regardless of casing, but preserve the original casing in the return value.')
+// console.log('Find all instances of a substring in a larger string and return the string with tags around the instances. Find all hits regardless of casing, but preserve the original casing in the return value.')
+
+
+// ========== Highlight
+
 

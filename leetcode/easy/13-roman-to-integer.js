@@ -21,7 +21,7 @@ function romanToInt(s) {
 
   console.log('integer', integer)
 
-    return integer;
+  return integer;
 };
 
 
@@ -42,10 +42,10 @@ function determineCalculation (currentCharacter, previousCharacter) {
     currentCharacter === "X" && previousCharacter === "C" || 
     currentCharacter === "C" && previousCharacter === "D"|| 
     currentCharacter === "C" && previousCharacter === "M") {
-         return -1 * ROMAN_TO_INT_CONVERSION[currentCharacter];
+      return -1 * ROMAN_TO_INT_CONVERSION[currentCharacter];
     }
 
-            return ROMAN_TO_INT_CONVERSION[currentCharacter];
+  return ROMAN_TO_INT_CONVERSION[currentCharacter];
 }
 
 

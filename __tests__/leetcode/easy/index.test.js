@@ -3,6 +3,32 @@ const {removeElement} = require('../../../leetcode/easy/27-remove-element');
 const {removeDuplicates} = require('../../../leetcode/easy/26-remove-duplicates')
 const {majorityElement, majorityElementEfficient} = require('../../../leetcode/easy/169-majority-element');
 const {romanToInt} = require('../../../leetcode/easy/13-roman-to-integer');
+const {maxProfit} = require('../../../leetcode/easy/121-best-time-to-buy-and-sell');
+const {lengthOfLastWord} = require('../../../leetcode/easy/58-length-of-last-word');
+
+xdescribe("13. Roman to Integer", () => {
+  it("Should return an integer conversion of roman numeral numbers", ()=> {
+    const inputs = [
+      {
+        roman: "III",
+        expected: 3
+      },
+      {
+        roman: "LVIII",
+        expected:58 
+      },
+      {
+        roman: "MCMXCIV",
+        expected: 1994 
+      }
+    ]
+
+    inputs.forEach(input => {
+      const actual = romanToInt(input.roman);
+      expect(actual).toEqual(input.expected)
+    })
+  })   
+})
 
 xdescribe('26. Remove Duplicates', () => {
   it ('Should return the array with duplicates moved to the back option 1', () => {
@@ -42,6 +68,19 @@ xdescribe('27. Remove Element', () => {
   })
 })
 
+describe("58. Length Of Last Word", () => {
+  const tests = [
+    ["Hello World", 5],
+    ["   Fly me     to   the moon     ", 4],
+    ["Yo     ", 2],
+  ]
+
+  test.each(tests)("lengthOfLastWord(%j) should equal %d", (sentence, expected) => {
+    expect(lengthOfLastWord(sentence)).toEqual(expected);
+  });
+
+})
+
 xdescribe('88. Merge Sorted Array', () => {
   it ("Should return sorted array for inputs option 1", () => {
     const nums1 = [1,2,7,9,0,0];
@@ -78,6 +117,44 @@ xdescribe('88. Merge Sorted Array', () => {
   })
 })
 
+xdescribe("121. Best Time to Buy and Sell", () => {
+  it("should return maximum profits with given inputs", () => {
+    const inputs = [
+      {
+        prices: [7,1,5,3,6,4],
+        expected: 5
+      },
+      {
+        prices: [7,6,4,3,1],
+        expected: 0
+      },
+      {
+        prices: [1,3],
+        expected: 2
+      },
+      {
+        prices: [1],
+        expected: 0
+      },
+      {
+        prices: [1,4,2],
+        expected: 3
+      },
+      {
+        prices: [3,2,6,5,0,3],
+        expected: 4
+      },
+    ];
+
+    inputs.forEach(input => {
+      console.log('FOR input:', input.prices)
+      const actual = maxProfit(input.prices);
+      expect(actual).toEqual(input.expected)
+    })
+
+  })
+})
+
 xdescribe("169 Majority Element", () => {
   const inputs = [
     {
@@ -107,7 +184,7 @@ xdescribe("169 Majority Element", () => {
     {
       nums: [1,2]
     },
-    
+
   ]
   describe("Majority Element : Space: O(n)", () => {
     it('Should return majority element for every input', () => {
@@ -139,26 +216,5 @@ xdescribe("169 Majority Element", () => {
   })
 })
 
-describe("13. Roman to Integer", () => {
-  it("Should return an integer conversion of roman numeral numbers", ()=> {
-    const inputs = [
-      {
-        roman: "III",
-        expected: 3
-      },
-      {
-        roman: "LVIII",
-        expected:58 
-      },
-      {
-        roman: "MCMXCIV",
-        expected: 1994 
-      }
-    ]
 
-    inputs.forEach(input => {
-      const actual = romanToInt(input.roman);
-      expect(actual).toEqual(input.expected)
-    })
-  })   
-})
+
