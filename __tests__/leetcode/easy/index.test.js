@@ -5,6 +5,7 @@ const {majorityElement, majorityElementEfficient} = require('../../../leetcode/e
 const {romanToInt} = require('../../../leetcode/easy/13-roman-to-integer');
 const {maxProfit} = require('../../../leetcode/easy/121-best-time-to-buy-and-sell');
 const {lengthOfLastWord} = require('../../../leetcode/easy/58-length-of-last-word');
+const {longestCommonPrefix} = require('../../../leetcode/easy/14-longest-common-prefix')
 
 xdescribe("13. Roman to Integer", () => {
   it("Should return an integer conversion of roman numeral numbers", ()=> {
@@ -28,6 +29,33 @@ xdescribe("13. Roman to Integer", () => {
       expect(actual).toEqual(input.expected)
     })
   })   
+})
+
+describe("14. Longest Common Prefix", () => {
+  const tests = [
+    [['florer'], 'florer'],
+    [['flower',
+      'floor',
+      'flounder',
+     ], 'flo'],
+    [['flower',
+      'flan',
+      'pan',
+     ], ''],
+    [['pan',
+      'put',
+      'poise',
+     ], 'p'],
+    [['flour',
+      'flower',
+      'f',
+     ], 'f'],
+  ]
+
+
+  test.each(tests)("longestCommonPrefix(%j) should equal %s", (words, expected) => {
+    expect(longestCommonPrefix(words)).toEqual(expected);
+  })
 })
 
 xdescribe('26. Remove Duplicates', () => {
@@ -68,7 +96,7 @@ xdescribe('27. Remove Element', () => {
   })
 })
 
-describe("58. Length Of Last Word", () => {
+xdescribe("58. Length Of Last Word", () => {
   const tests = [
     ["Hello World", 5],
     ["   Fly me     to   the moon     ", 4],

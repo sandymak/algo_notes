@@ -5,3 +5,4 @@ const {majorityElement} = require('./169-majority-element')
 const {romanToInt} = require('./13-roman-to-integer')
 const {maxProfit} = require('./121-best-time-to-buy-and-sell')
 const {lengthOfLastWord} = require('./58-length-of-last-word')
+const {longestCommonPrefix} = require('./14-longest-common-prefix');
