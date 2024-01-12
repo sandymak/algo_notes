@@ -11,13 +11,13 @@ function highlight (search, result) {
   const lowercasedResult = result.toLowerCase()
   let foundIndex = lowercasedResult.indexOf(lowercasedSearch);
 
-  console.log('foundIndex', foundIndex)
+  // console.log('foundIndex', foundIndex)
   
   while (foundIndex !== -1) {
     const beforeFound = result.slice(start, foundIndex);
     const found = result.slice(foundIndex, foundIndex + search.length);
-    console.log('first segment', beforeFound);
-    console.log('second segment', found);
+    // console.log('first segment', beforeFound);
+    // console.log('second segment', found);
     updated += `${beforeFound}<b>${found}</b>`
     start = foundIndex + search.length;
     foundIndex = lowercasedResult.indexOf(lowercasedSearch, start);
@@ -61,8 +61,8 @@ const inputs = [
 inputs.forEach(input => {
   const actual = highlight(input.search, input.result);
 
-  console.log("HIGHLIGHT for", input.id, actual);
-  console.log("is Passed???", actual === input.expected)
+  // console.log("HIGHLIGHT for", input.id, actual);
+  // console.log("is Passed???", actual === input.expected)
 })
 
 

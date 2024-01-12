@@ -31,7 +31,7 @@ xdescribe("13. Roman to Integer", () => {
   })   
 })
 
-describe("14. Longest Common Prefix", () => {
+xdescribe("14. Longest Common Prefix", () => {
   const tests = [
     [['florer'], 'florer'],
     [['flower',

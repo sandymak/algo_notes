@@ -7,6 +7,7 @@ const {substrings} = require('./substrings');
 const {highlight} = require('./highlight');
 
 const easyLeetCodeProblems = require('./easy')
+const mediumLeetCodeProblems = require('./medium')
 
 
 /* 
